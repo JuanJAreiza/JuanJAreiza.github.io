@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root{
+    --morado: rgba(175,60,249,255);
+    --rojo: rgba(240,10,96,255);
+    --gris: rgba(240,240,240,255);
+    --gris-oscuro: rgba(155,155,155,255);
+    --fondo: rgba(255,255,255,255);
+    --letra: rgba(29,29,27,255);
+    --blur: blur(10px);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    transition: all .2s linear;
+}
+
+/*HEADER*/
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.navbar a{
+color: var(--letra);
+}
+
+.navbar a:hover{
+color: var(--rojo);
+}
+
+header{
+    position: fixed;
+    width:100%;
+    top: 0;
+    background: var(--fondo);
+    box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .1);
+    font-weight: 600;
+    z-index: 1;
+}
+
+.navbar{
+    width: 100%;
+    height: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .home{
+    cursor: pointer;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .home img{
+    width: 150px;
+    height: 60px;
+}
+
+.navbar .perfil img{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.navbar .menu_btn{
+    color: var(--letra);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/*BIENVENIDA*/
+.inicio{
+    background: var(--fondo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+    height: 200px;
+    padding: 5rem;
+    box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .1);
+}
+
+.bienvenida-conten{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    font-size: 25px;
+    line-height: 1.6;
+    width: 150px;
+}
+
+.bienvenida-conten .bienvenido{
+    font-size: 20px;
+}
+
+.bienvenida-conten .nombre:hover{
+    transform: rotate(8deg);
+}
+
+.bienvenida-conten .nombre a{
+    text-decoration: none;
+    color: var(--rojo);
+    margin-left: 15px;
+}
+
+/*PROGRESO*/
+.progreso{
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+} 
+
+.progreso .titulo-progreso{
+    margin-bottom: -5px;
+}
+
+.progreso .barra-base{
+    transform: scale(.8);
+}
+
+.fondo{
+    position: absolute;
+    bottom: 0;
+    min-height: 100vh;
+    background: linear-gradient(-180deg, var(--fondo), var(--rojo));
+    opacity: .1;
+    background-size: cover;
+    z-index: -2;
+    filter: blur(4px);
+}
+
+/*CATEGORIAS*/
+.categoria-contenedor{
+    height: 70%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.categoria-contenedor .titulo{
+    margin-top: 35px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.categoria-contenedor .botones{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.categoria-contenedor .botones .boton{
+    display: flex;
+    padding: 2rem 3rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .3);
+    margin: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.categoria-contenedor .botones .boton img{
+    height: 10rem;
+}
+
+.categoria-contenedor .botones .boton:hover img{
+    transform: scale(1.2);
+}
+
+.categoria-contenedor .botones .boton button{
+    height: 50px;
+    width: 150px;
+    background-color: var(--letra);
+    color: var(--fondo);
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.categoria-contenedor .botones .boton button:hover{
+    transform: scale(1.1);
+    background: linear-gradient(-135deg, var(--morado), var(--rojo));
+    color: var(--fondo);
+}
+
+.categoria-contenedor .botones .boton button:active{
+    transform: scale(0.95);
+}
+
+.footer{
+    position: relative;
+    bottom: -41.8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: .8;
+    background-color: var(--morado);
+    padding: 1rem;
+    color: var(--fondo);
+}
+
+.footer p{
+    cursor: pointer;
+}
+
+.footer p:hover{
+    text-decoration: underline;
+}
+
+/* DROPDOWN MENU A */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    height: 0;
+    width: 100%;
+    background-color: rgba(175, 60, 249, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 0 0 30px 30px;
+    overflow: hidden;
+    z-index: 1;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu a{
+    color: var(--letra);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.dropdown_menu a:hover{
+    color: var(--rojo);
+}
+
+.dropdown_menu a:active{
+    transform: scale(0.95);
+}
+
+/* DROPDOWN MENU B */
+.dropdown_menuB{
+    display: none;
+    position: absolute;
+    height: 0;
+    width: 100%;
+    background-color: rgba(175, 60, 249, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menuB.open{
+    height: 240px;
+}
+
+.dropdown_menuB li{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menuB a{
+    color: var(--letra);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.dropdown_menuB a:hover{
+    color: var(--rojo);
+}
+
+.dropdown_menuB a:active{
+    transform: scale(0.95);
+}
+
+/* RESPONSIVE */
+@media(max-width: 992px){
+    .navbar .links{
+        display: none;
+    }
+
+    .navbar .menu_btn{
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media (max-width: 576px){
+    .categoria-contenedor .botones .boton{
+        transform: scale(.8);
+        display: flex;
+        flex-flow: row wrap;
+        margin: -10px;
+    }
+    
+    .dropdown_menu{
+        width: 100%;
+    }
+
+    .perfil{
+        display: none;
+    }
+}
