@@ -34,11 +34,11 @@ a{
 }
 
 .navbar a{
-color: var(--letra);
+    color: var(--letra);
 }
 
 .navbar a:hover{
-color: var(--rojo);
+    color: var(--rojo);
 }
 
 header{
@@ -238,6 +238,18 @@ footer{
 
 .footer p{
     cursor: pointer;
+}
+
+footer .redes img{
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    
+    margin-left: 10px;
+}
+
+footer .redes img:hover{
+    transform: scale(1.1) rotate(360deg);
 }
 
 .footer p:hover{

@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root{
+  --morado: rgba(175,60,249,255);
+  --rojo: rgba(240,10,96,255);
+  --gris: rgba(240,240,240,255);
+  --gris-oscuro: rgba(155,155,155,255);
+  --fondo: rgba(255,255,255,255);
+  --letra: rgba(29,29,27,255);
+  --blur: blur(10px);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  transition: all .2s linear;
+}
+
+body{
+  height: 100vh;
+  position: relative;
+}
+
+/*HEADER*/
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.navbar a{
+  color: var(--letra);
+}
+
+.navbar a:hover{
+  color: var(--rojo);
+}
+
+header{
+  position: fixed;
+  width:100%;
+  top: 0;
+  background: var(--fondo);
+  box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .1);
+  font-weight: 600;
+  z-index: 1;
+}
+
+.navbar{
+  width: 100%;
+  height: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .home{
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.navbar .links{
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar .home img{
+  width: 150px;
+  height: 60px;
+}
+
+.navbar .perfil img{
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.navbar .menu_btn{
+  color: var(--letra);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.fondo{
+  position: absolute;
+  margin-top: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../imgs/materias.png");
+  background-repeat: no-repeat;
+  z-index: -1;
+  filter: blur(1px);
+}
+
+/* DROPDOWN MENU A */
+.dropdown_menu{
+  display: none;
+  position: absolute;
+  height: 0;
+  width: 100%;
+  background-color: rgba(175, 60, 249, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 0 0 30px 30px;
+  overflow: hidden;
+  z-index: 1;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+  height: 240px;
+}
+
+.dropdown_menu li{
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu a{
+  color: var(--letra);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.dropdown_menu a:hover{
+  color: var(--rojo);
+}
+
+.dropdown_menu a:active{
+  transform: scale(0.95);
+}
+
+.titulo{
+  margin-top: 160px;
+  text-align: center;
+}
+
+.conten-cat{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .conten-cat .categorias{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+    width: 60%;
+    margin-left: 200px;
+  }
+  
+  .conten-cat .categorias .boton{
+    display: flex;
+    padding: 2rem 3rem;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    box-shadow: 0 .25rem .5rem #212126;
+    border-radius: 40%;
+    min-width: 20%;
+    max-width: 250px;
+    cursor: pointer;
+  }
+  
+  .conten-cat .categorias .boton img{
+    height: 7rem;
+  }
+  
+  .conten-cat .categorias .boton:hover img{
+    transform: scale(1.2);
+  }
+  
+  .conten-cat .categorias .boton button{
+    height: 50px;
+    width: 120px;
+    background-color: var(--letra);
+    color: var(--fondo);
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    margin: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .conten-cat .categorias .boton button:hover{
+    transform: scale(1.1);
+    background: linear-gradient(-135deg, var(--morado), var(--rojo));
+    color: var(--fondo);
+  }
+  
+  .conten-cat .categorias .boton button:active{
+    transform: scale(0.95);
+  }
+
+  .retenciones{
+    margin-right: 200px;
+    right: 0;
+    padding: 90px;
+    height: 50vh;
+    width: 30vw;
+    box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .1);
+  }
+
+  .retenciones .titu{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .retenciones .titu .titulo{
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .retenciones .titu .titulo-esp{
+    font-size: 30px;
+    font-weight: 700;
+    width: 40px;
+    color: var(--fondo);
+    text-align: center;
+    background: linear-gradient(-135deg, var(--morado), var(--rojo));
+    border-radius: 20px;
+  }
+  
+  /* FOOTER */
+  footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: .8;
+    background-color: var(--morado);
+    padding: 1rem;
+    color: var(--fondo);
+  }
+  
+  .footer p{
+    cursor: pointer;
+  }
+  
+  .footer p:hover{
+    text-decoration: underline;
+  }
+  
+/* CONTENIDO */
+
+  /* RESPONSIVE */
+  /*Tablet*/
+  @media(max-width: 992px){
+      .navbar .links{
+          display: none;
+      }
+  
+      .navbar .menu_btn{
+          display: block;
+      }
+  
+      .dropdown_menu {
+          display: block;
+      }
+  }
+  
+  /*Mobile*/
+  @media (max-width: 576px){
+      
+      .dropdown_menu{
+          width: 100%;
+          margin-right: 50px;
+      }
+  
+      .perfil{
+          display: none;
+      }
+  
+      .menu_btn{
+          margin-right: 20px;
+      }
+  
+      .home{
+          margin-left: 10px;
+      }
+  }
