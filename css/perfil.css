@@ -47,9 +47,8 @@ header{
 }
 
 .navbar{
-    width: 100%;
+    width:100%;
     height: 80px;
-    max-width: 1200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -62,17 +61,13 @@ header{
 .navbar .links{
     display: flex;
     gap: 2rem;
+    margin-right: 20px;
 }
 
 .navbar .home img{
     width: 150px;
     height: 60px;
-}
-
-.navbar .perfil img{
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
+    margin-left: 10px;
 }
 
 .navbar .menu_btn{
@@ -85,7 +80,7 @@ header{
 
 /*INFORMACIÓN*/
 .info_principal{
-    margin-top: 50px;
+    margin-top: 120px;
     text-align: center;
 }
 
@@ -102,12 +97,14 @@ header{
 }
 
 .info_conten .titulo{
-    font-size: 90%;
     font-weight: 600;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     user-select: none;
     background: linear-gradient(-135deg, var(--morado), var(--rojo));
     color: var(--fondo);
+    height: 50px;
 }
 
 .info_conten form{
@@ -178,15 +175,28 @@ form .info input[type="submit"]:active{
 }
 
 .agregar_info{
-    text-align: center;
     position: relative;
-    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--morado);
+}
+
+.agregar_info a{
+    margin-left: 5px;
+    font-size: 20px;
 }
 
 /*FOOTER*/
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
 .footer{
-    position: relative;
-    bottom: -41.8vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -283,6 +293,12 @@ form .info input[type="submit"]:active{
 }
 
 /* RESPONSIVE */
+@media(max-width: 1680px){
+    .agregar_info{
+        margin-top: 100px;
+    }
+}
+
 @media(max-width: 992px){
     .navbar .links{
         display: none;
@@ -299,6 +315,14 @@ form .info input[type="submit"]:active{
     .info_conten form .info input{
         width: 500px;
     }
+
+    .menu_btn{
+        margin-right: 20px;
+    }
+
+    .home{
+        margin-left: 10px;
+    }
 }
 
 @media (max-width: 576px){
@@ -313,6 +337,10 @@ form .info input[type="submit"]:active{
         width: 100%;
     }
 
+    .agregar_info{
+        margin-top: -150px;
+    }
+
     .perfil{
         display: none;
     }
@@ -320,4 +348,9 @@ form .info input[type="submit"]:active{
     .info_conten form .info input{
         width: 200px;
     }
+
+    .menu_btn{
+        margin-right: 20px;
+    }
+
 }

@@ -18,6 +18,11 @@
     transition: all .2s linear;
 }
 
+body{
+    height: 100vh;
+    position: relative;
+}
+
 /*HEADER*/
 
 li{
@@ -58,6 +63,7 @@ header{
 
 .navbar .home{
     cursor: pointer;
+    margin-left: 20px;
 }
 
 .navbar .links{
@@ -74,6 +80,7 @@ header{
     width: 60px;
     height: 60px;
     cursor: pointer;
+    margin-right: 20px;
 }
 
 .navbar .menu_btn{
@@ -91,7 +98,7 @@ header{
     align-items: center;
     justify-content: center;
     margin-top: 90px;
-    height: 200px;
+    height: 175px;
     padding: 5rem;
     box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .1);
 }
@@ -103,7 +110,6 @@ header{
     height: 100px;
     font-size: 25px;
     line-height: 1.6;
-    width: 150px;
 }
 
 .bienvenida-conten .bienvenido{
@@ -127,7 +133,7 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 5px;
 } 
 
 .progreso .titulo-progreso{
@@ -138,37 +144,36 @@ header{
     transform: scale(.8);
 }
 
-.fondo{
-    position: absolute;
-    bottom: 0;
+/*.fondo{
+    position: relative;
     min-height: 100vh;
     background: linear-gradient(-180deg, var(--fondo), var(--rojo));
     opacity: .1;
     background-size: cover;
-    z-index: -2;
+    z-index: -1;
     filter: blur(4px);
-}
+}*/
 
 /*CATEGORIAS*/
 .categoria-contenedor{
-    height: 70%;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     align-items: center;
-    justify-content: center;
+    padding-bottom: 100px;
 }
 
 .categoria-contenedor .titulo{
-    margin-top: 35px;
+    margin-top: 40px;
     margin-bottom: 10px;
     font-size: 20px;
+    padding-bottom: 40px;
 }
 
-.categoria-contenedor .botones{
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
+.botones{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+    width: 60%;
 }
 
 .categoria-contenedor .botones .boton{
@@ -178,7 +183,6 @@ header{
     justify-content: center;
     flex-direction: column;
     box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .3);
-    margin: 15px;
     border-radius: 20px;
     cursor: pointer;
 }
@@ -214,9 +218,15 @@ header{
     transform: scale(0.95);
 }
 
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
 .footer{
-    position: relative;
-    bottom: -41.8vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -273,46 +283,18 @@ header{
     transform: scale(0.95);
 }
 
-/* DROPDOWN MENU B */
-.dropdown_menuB{
-    display: none;
-    position: absolute;
-    height: 0;
-    width: 100%;
-    background-color: rgba(175, 60, 249, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    overflow: hidden;
-    z-index: 1;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.dropdown_menuB.open{
-    height: 240px;
-}
-
-.dropdown_menuB li{
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.dropdown_menuB a{
-    color: var(--letra);
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.dropdown_menuB a:hover{
-    color: var(--rojo);
-}
-
-.dropdown_menuB a:active{
-    transform: scale(0.95);
-}
-
 /* RESPONSIVE */
+
+/*PC Ajuste*/
+@media(max-width: 2285px){
+    .botones{
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+        width: 40%;
+    }
+}
+
+/*Tablet*/
 @media(max-width: 992px){
     .navbar .links{
         display: none;
@@ -327,19 +309,44 @@ header{
     }
 }
 
+/*Mobile*/
 @media (max-width: 576px){
+    .categoria-contenedor .titulo{
+        padding-bottom: 10px;
+    }
+
+    .botones{
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 2fr));
+        width: 80%;
+    }
+    
     .categoria-contenedor .botones .boton{
+        flex-direction: row;
         transform: scale(.8);
-        display: flex;
-        flex-flow: row wrap;
         margin: -10px;
+        padding: 5px 5px 3px 5px;
+    }
+
+    .categoria-contenedor .botones .boton button{
+        transform: scale(1.1);
+        margin-left: 40px;
     }
     
     .dropdown_menu{
         width: 100%;
+        margin-right: 50px;
     }
 
     .perfil{
         display: none;
+    }
+
+    .menu_btn{
+        margin-right: 20px;
+    }
+
+    .home{
+        margin-left: 10px;
     }
 }
