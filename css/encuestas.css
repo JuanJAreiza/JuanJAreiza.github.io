@@ -237,31 +237,43 @@ header{
   }
   
   /* FOOTER */
-  footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-  }
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: .8;
+  background-color: var(--morado);
+  padding: 1rem;
+  color: var(--fondo);
+}
+
+.footer p{
+  cursor: pointer;
+}
+
+footer .redes img{
+  height: 30px;
+  width: 30px;
+  text-align: center;
   
-  .footer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    opacity: .8;
-    background-color: var(--morado);
-    padding: 1rem;
-    color: var(--fondo);
-  }
-  
-  .footer p{
-    cursor: pointer;
-  }
-  
-  .footer p:hover{
-    text-decoration: underline;
-  }
+  margin-left: 10px;
+}
+
+footer .redes img:hover{
+  transform: scale(1.1) rotate(360deg);
+}
+
+.footer p:hover{
+  text-decoration: underline;
+}
   
 /* CONTENIDO */
 
