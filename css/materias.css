@@ -90,19 +90,6 @@ header{
   display: none;
 }
 
-.fondo{
-  position: absolute;
-  margin-top: 100px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 100vh;
-  background-image: url("../imgs/materias.png");
-  background-repeat: no-repeat;
-  z-index: -1;
-  filter: blur(1px);
-}
-
 /* DROPDOWN MENU A */
 .dropdown_menu{
   display: none;
@@ -114,7 +101,7 @@ header{
   border-radius: 0 0 30px 30px;
   overflow: hidden;
   z-index: 1;
-  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .dropdown_menu.open{
