@@ -145,6 +145,10 @@ header{
     justify-content: center;
 }
 
+.opciones a{
+    color: inherit;
+}
+
 .opciones p{
     margin: 6px 5px 0 5px;
     color: var(--morado);

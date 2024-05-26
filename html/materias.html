@@ -47,41 +47,83 @@
 
   <div class="interes"><h3>De tu interés...</h3></div>
 
-  <section class="conten">
-    <div class="slider-conten">
-      <div class="slider">
-        <img id="slider-1" src="../imgs/slide1.jpg" alt="">
-        <img id="slider-2" src="../imgs/slide2.jpg" alt="">
-        <img id="slider-3" src="../imgs/slide3.jpg" alt="">
-        <img id="slider-4" src="../imgs/slide4.jpg" alt="">
+  <section class="slider-container">
+    <div class="slider">
+      <div class="slide">
+        <img src="../imgs/slide1.jpg" alt="Imagen 1">
       </div>
-      <div class="slider-nav">
-        <a href="#slider-1"></a>
-        <a href="#slider-2"></a>
-        <a href="#slider-3"></a>
-        <a href="#slider-4"></a>
+      <div class="slide">
+        <img src="../imgs/slide2.jpg" alt="Imagen 2">
+      </div>
+      <div class="slide">
+        <img src="../imgs/slide3.jpg" alt="Imagen 3">
+      </div>
+      <div class="slide">
+        <img src="../imgs/slide4.jpg" alt="Imagen 4">
       </div>
     </div>
+    <div class="controls">
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+    <div class="dots-container">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
   </section>
-
 
   <div class="conten-cat">
     <h1 class="titulo">¿Qué estás buscando?</h1>
     <div class="categorias">
-      <nav class = "boton">
-        <a href="#"><img src="../imgs/materias_actuales.png" alt="Horarios"></a>
-        <a href="#"><button>Materias actuales</button></a>
-      </nav>
-      <nav class = "boton">
-        <a href="#"><img src="../imgs/matricula.png" alt="Notas"></a>
-        <a href="#"><button>Matricula</button></a>
-      </nav>
-      <nav class = "boton">
-        <a href="#"><img src="../imgs/historial_materias.png" alt="Materias"></a>
-        <a href="#"><button>Historial de materias</button></a>
-      </nav>
+      <div class="boton">
+        <a href="#">
+          <div class="icon">
+            <img src="../imgs/materias_actuales.png" alt="Horarios">
+          </div>
+          <div class="text">Materias actuales</div>
+        </a>
+      </div>
+      <div class="boton">
+        <a href="#">
+          <div class="icon">
+            <img src="../imgs/matricula.png" alt="Notas">
+          </div>
+          <div class="text">Matricula</div>
+        </a>
+      </div>
+      <div class="boton">
+        <a href="#">
+          <div class="icon">
+            <img src="../imgs/historial_materias.png" alt="Materias">
+          </div>
+          <div class="text">Historial de materias</div>
+        </a>
+      </div>
     </div>
   </div>
+  
+
+<!--
+  <div class="conten-cat">
+    <h1 class="titulo">¿Qué estás buscando?</h1>
+    <div class="categorias">
+      <div class = "boton">
+        <a href="#"><img src="../imgs/materias_actuales.png" alt="Horarios"></a>
+        <a href="#"><button>Materias actuales</button></a>
+      </div>
+      <div class = "boton">
+        <a href="#"><img src="../imgs/matricula.png" alt="Notas"></a>
+        <a href="#"><button>Matricula</button></a>
+      </div>
+      <div class = "boton">
+        <a href="#"><img src="../imgs/historial_materias.png" alt="Materias"></a>
+        <a href="#"><button>Historial de materias</button></a>
+      </div>
+    </div>
+  </div>
+-->
   
 
   <footer>
