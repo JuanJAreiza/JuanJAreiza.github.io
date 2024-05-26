@@ -33,8 +33,18 @@ document.addEventListener('DOMContentLoaded', () => {
  });
 
 
+//HOME: Barra de progreso
+document.addEventListener("DOMContentLoaded", function() {
+    var progressBar = document.getElementById('progress-bar');
+    var progressText = document.getElementById('progress-text');
+    setTimeout(function() {
+      progressBar.style.width = '80%';
+      progressText.innerText = '80%';
+    }, 500); // Delay for a more visible effect
+  });
+
+  
  //MATERIAS: FUNCION PARA EL DESPLIEGUE DE TABLAS
- // scripts.js
  const slides = document.querySelectorAll('.slide');
  const dots = document.querySelectorAll('.dot');
  const prevButton = document.querySelector('.prev');
@@ -68,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
    intervalId = setInterval(nextSlide, 4000);
  }
  
- // Initial setup
+ // Debe empezar así
  showSlide(currentIndex);
  resetInterval();
  
@@ -82,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
      resetInterval();
    });
  });
+
  
 
 /*
