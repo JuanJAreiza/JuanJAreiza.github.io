@@ -50,57 +50,65 @@
         <h1>¡Bienvenido </h1>
       </div>
       <div>  
-        <h1 class="nombre"><a href="../html/perfil.html">Juan!</a></h1>
+        <h1 class="nombre" id="nombre"><a href="../html/perfil.html">Juan!</a></h1>
       </div>
     </div>
 
 
     <section class="progress-section">
-      <div class="progress-container" onclick="location.href='another_section.html'">
+      <div class="apoyo-textos">
+        <p>Este es tu progreso:</p>
+        <p id="falta-poco">¡Falta poco!</p>
+      </div>
+      <div class="progress-container" id="progress-container" onclick="location.href='diligencias.html'">
         <div class="progress-bar" id="progress-bar">
           <span class="progress-text" id="progress-text">80%</span>
           <i class="fa fa-graduation-cap progress-icon" aria-hidden="true"></i>
         </div>
       </div>
     </section>
-    
-    <!--<div class="progreso">
-      <div class="titulo-progreso"><h4>Este es tú progreso</h4></div>
-      <div class="barra-base"> <a href="../html/notas.html"><img src="../imgs/bar-progress.png" alt=""></a></div>
-    </div>-->
   </div>
 
   <div class="fondo"> </div>
 
   <div class="categoria-contenedor">
-
     <div class="titulo">
-      <h2>Categorías</h2>
+        <h1>Categorías</h1>
     </div>
+    <div class="botones">
+        <nav class="boton">
+            <a href="horarios.html">
+                <img src="../imgs/horario.png" alt="Horarios">
+                <button>Horarios</button>
+            </a>
+        </nav>
+        <nav class="boton">
+            <a href="notas.html">
+                <img src="../imgs/notas.png" alt="Notas">
+                <button>Notas</button>
+            </a>
+        </nav>
+        <nav class="boton">
+            <a href="materias.html">
+                <img src="../imgs/materias.png" alt="Materias">
+                <button>Materias</button>
+            </a>
+        </nav>
+        <nav class="boton">
+            <a href="encuestas.html">
+                <img src="../imgs/encuesta.png" alt="Encuesta">
+                <button>Encuestas</button>
+            </a>
+        </nav>
+        <nav class="boton">
+            <a href="diligencias.html">
+                <img src="../imgs/diligencias.png" alt="Diligencias">
+                <button>Diligencias</button>
+            </a>
+        </nav>
+    </div>
+</div>
 
-    <div class = "botones">
-      <nav class = "boton">
-        <a href="horarios.html"><img src="../imgs/horario.png" alt="Horarios"></a>
-        <a href="horarios.html"><button>Horarios</button></a>
-      </nav>
-      <nav class = "boton">
-        <a href="notas.html"><img src="../imgs/notas.png" alt="Notas"></a>
-        <a href="notas.html"><button>Notas</button></a>
-      </nav>
-      <nav class = "boton">
-        <a href="materias.html"><img src="../imgs/materias.png" alt="Materias"></a>
-        <a href="materias.html"><button>Materias</button></a>
-      </nav>
-      <nav class = "boton">
-        <a href="encuestas.html"><img src="../imgs/encuesta.png" alt="Encuesta"></a>
-        <a href="encuestas.html"><button>Encuestas</button></a>
-      </nav>
-      <nav class = "boton">
-        <a href="diligencias.html"><img src="../imgs/diligencias.png" alt="Diligencias"></a>
-        <a href="diligencias.html"><button>Diligencias</button></a>
-      </nav>
-    </div>
-  </div>
   <footer>
     <div class="footer">
       <p>Versión 0.1</p>

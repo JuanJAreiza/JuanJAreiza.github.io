@@ -33,17 +33,65 @@ document.addEventListener('DOMContentLoaded', () => {
  });
 
 
+ document.addEventListener("DOMContentLoaded", function() {
+    var progressBar = document.getElementById('progress-bar');
+    var progressText = document.getElementById('progress-text');
+    var faltaPoco = document.getElementById('falta-poco');
+    var progressContainer = document.getElementById('progress-container');
+
+    if (progressBar && progressText) {
+        setTimeout(function() {
+            progressBar.style.width = '80%';
+            progressText.innerText = '80%';
+        }, 100); // Delay
+    } else {
+        console.error('progressBar or progressText is null');
+    }
+
+    if (progressContainer && faltaPoco) {
+        progressContainer.addEventListener('mouseover', () => {
+            faltaPoco.style.fontSize = '1.1em';
+            faltaPoco.style.color = 'var(--verde)';
+        });
+
+        progressContainer.addEventListener('mouseout', () => {
+            faltaPoco.style.fontSize = '';
+            faltaPoco.style.color = '';
+        });
+    } else {
+        console.error('progressContainer or faltaPoco is null');
+    }
+});
+
+
 //HOME: Barra de progreso
+/*
 document.addEventListener("DOMContentLoaded", function() {
     var progressBar = document.getElementById('progress-bar');
     var progressText = document.getElementById('progress-text');
     setTimeout(function() {
       progressBar.style.width = '80%';
       progressText.innerText = '80%';
-    }, 500); // Delay for a more visible effect
+    }, 100); // Delay
   });
 
-  
+//HOME: Cambiar el estilo del texto "¡Falta poco!" en función del hover
+const faltaPoco = document.getElementById('falta-poco');
+const progressContainer = document.getElementById('progress-container');
+
+progressContainer.addEventListener('mouseover', () => {
+  faltaPoco.style.fontSize = '1.1em';
+  faltaPoco.style.color = 'var(--verde)';
+});
+
+progressContainer.addEventListener('mouseout', () => {
+  faltaPoco.style.fontSize = '';
+  faltaPoco.style.color = '';
+});
+
+
+
+*/
  //MATERIAS: FUNCION PARA EL DESPLIEGUE DE TABLAS
  const slides = document.querySelectorAll('.slide');
  const dots = document.querySelectorAll('.dot');
@@ -93,54 +141,5 @@ document.addEventListener("DOMContentLoaded", function() {
    });
  });
 
- 
-
-/*
- const slider = document.querySelector('.slider');
- const images = document.querySelectorAll('.slider img');
- const dots = document.querySelectorAll('.dot');
- const prevButton = document.querySelector('.prev');
- const nextButton = document.querySelector('.next');
- 
- let index = 0;
- let intervalTime = 5000;
- let slideInterval;
- 
- function showSlide(n) {
-     index = (n + images.length) % images.length;
-     slider.style.transform = `translateX(${-index * 100}%)`;
-     updateDots();
-     resetInterval();
- }
- 
- function nextSlide() {
-     showSlide(index + 1);
- }
- 
- function prevSlide() {
-     showSlide(index - 1);
- }
- 
- function updateDots() {
-     dots.forEach(dot => dot.classList.remove('active'));
-     dots[index].classList.add('active');
- }
- 
- dots.forEach((dot, i) => {
-     dot.addEventListener('click', () => {
-         showSlide(i);
-     });
- });
- 
- prevButton.addEventListener('click', prevSlide);
- nextButton.addEventListener('click', nextSlide);
- 
- function resetInterval() {
-     clearInterval(slideInterval);
-     slideInterval = setInterval(nextSlide, intervalTime);
- }
- 
- resetInterval();
- */
  
  

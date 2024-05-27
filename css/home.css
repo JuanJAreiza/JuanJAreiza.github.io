@@ -8,6 +8,8 @@
     --fondo: rgba(255,255,255,255);
     --letra: rgba(29,29,27,255);
     --blur: blur(10px);
+
+    --verde: rgba(37, 200, 91, 255);
 }
 
 *{
@@ -15,11 +17,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Nunito", sans-serif;
-    transition: all .2s linear;
 }
 
 body{
-    height: 100vh;
+    height: 100%;
     position: relative;
 }
 
@@ -90,6 +91,7 @@ header{
     display: none;
 }
 
+
 /*BIENVENIDA*/
 .inicio{
     background: var(--fondo);
@@ -116,7 +118,12 @@ header{
     font-size: 20px;
 }
 
+.bienvenida-conten .nombre{
+    animation: resaltar 5s infinite;
+}
+
 .bienvenida-conten .nombre:hover{
+    transition: all .2s linear;
     transform: rotate(8deg);
 }
 
@@ -131,23 +138,36 @@ header{
 .progress-section {
     width: 20%;
     max-width: 600px;
-  }
-  
-  .progress-container {
+}
+
+.apoyo-textos{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    user-select: none;
+}
+
+.progress-container {
+    margin-top: 5px;
     width: 100%;
     background-color: var(--gris);
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s;
-  }
-  
-  .progress-container:hover {
+}
+
+.progress-container:hover{
     transform: scale(1.02);
     box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .3);
-  }
-  
-  .progress-bar {
+}
+
+.progress-container:hover ~ .apoyo-textos #falta-poco{
+    font-size: 1.1em;
+}
+
+.progress-bar {
     height: 30px;
     width: 0;
     background-color: var(--rojo);
@@ -158,88 +178,112 @@ header{
     justify-content: flex-end;
     overflow: hidden;
     transition: width 2s ease-in-out;
-  }
-  
-  .progress-bar:hover {
+}
+
+.progress-bar:hover{
     background: linear-gradient(to right, var(--rojo), var(--morado));
-  }
-  
-  .progress-text {
+}
+
+.progress-bar:hover ~ .apoyo-textos #falta-poco{
+    columns: var(--rojo);
+}
+
+.progress-text {
     color: var(--fondo);
     font-weight: bold;
     margin-right: 10px;
-  }
-  
-  .progress-icon {
+}
+
+.progress-icon {
     color: var(--fondo);
     font-size: 24px;
     margin-right: 10px;
+}
+
+#falta-poco {
+    transition: font-size 0.3s ease;
   }
 
-/*CATEGORIAS*/
-.categoria-contenedor{
+/*CATEGORÍA*/
+.categoria-contenedor {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
     display: flex;
-    flex-flow: column;
-    align-items: center;
-    padding-bottom: 100px;
-}
-
-.categoria-contenedor .titulo{
-    margin-top: 40px;
-    margin-bottom: 10px;
-    font-size: 20px;
-    padding-bottom: 40px;
-}
-
-.botones{
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
-    width: 60%;
-}
-
-.categoria-contenedor .botones .boton{
-    display: flex;
-    padding: 2rem 3rem;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .3);
-    border-radius: 20px;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.titulo {
+    margin-bottom: 40px;
+}
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.boton {
+    background: var(--fondo);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+    height: 250px;
+}
+
+.boton:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.boton a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.boton img {
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+    width: 130px;
+}
+
+.boton button {
+    background-color: var(--rojo);
+    color: var(--fondo);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.categoria-contenedor .botones .boton img{
-    height: 10rem;
+.boton:hover button {
+    background: linear-gradient(to right, var(--rojo), var(--morado));
+    transform: scale(1.1);
 }
 
-.categoria-contenedor .botones .boton:hover img{
+.boton:hover img {
     transform: scale(1.2);
 }
 
-.categoria-contenedor .botones .boton button{
-    height: 50px;
-    width: 150px;
-    background-color: var(--letra);
-    color: var(--fondo);
-    font-weight: bold;
-    font-size: 18px;
-    border: none;
-    margin: 5px;
-    border-radius: 20px;
-    cursor: pointer;
-}
 
-.categoria-contenedor .botones .boton button:hover{
-    transform: scale(1.1);
-    background: linear-gradient(-135deg, var(--morado), var(--rojo));
-    color: var(--fondo);
-}
-
-.categoria-contenedor .botones .boton button:active{
-    transform: scale(0.95);
-}
-
+/*FOOTER*/
 footer{
     position: fixed;
     left: 0;
@@ -319,17 +363,27 @@ footer .redes img:hover{
 
 /* RESPONSIVE */
 
-/*PC Ajuste*/
-@media(max-width: 2285px){
-    .botones{
-        gap: 2rem;
-        grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
-        width: 40%;
-    }
-}
-
 /*Tablet*/
 @media(max-width: 992px){
+
+    .progress-section {
+        width: 60%;
+        max-width: 600px;
+    }
+
+    .botones {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .boton a {
+        padding: 15px;
+    }
+
+    .boton button {
+        font-size: 18px;
+    }
+
     .navbar .links{
         display: none;
     }
@@ -345,26 +399,19 @@ footer .redes img:hover{
 
 /*Mobile*/
 @media (max-width: 576px){
-    .categoria-contenedor .titulo{
-        padding-bottom: 10px;
+
+    .progress-section {
+        width: 80%;
+        max-width: 400px;
     }
 
     .botones{
         gap: 2rem;
-        grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 2fr));
-        width: 80%;
-    }
-    
-    .categoria-contenedor .botones .boton{
-        flex-direction: row;
-        transform: scale(.8);
-        margin: -10px;
-        padding: 5px 5px 3px 5px;
+        width: 100%;
     }
 
-    .categoria-contenedor .botones .boton button{
-        transform: scale(1.1);
-        margin-left: 40px;
+    .boton{
+        width: 450px;
     }
     
     .dropdown_menu{
