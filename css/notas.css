@@ -17,6 +17,9 @@
     --materia3light: rgba(172,185,255,255);
     --materia4: rgba(241,104,62,255);
     --materia4light: rgba(242,185,133,255);
+    --amarillotrans: rgba(241, 185, 17, 0.57);
+    --amarillo: rgba(243, 209, 53, 1);
+    --amarillolight: rgba(248, 226, 122, 1);
 
 }
 
@@ -137,9 +140,10 @@ header{
 }
 
 .notas-header h3{
-    font-size: 25px;
-    margin: 0;
+    font-size: 29px;
+    margin-bottom: 20px;
     text-decoration: underline;
+    color: var(--amarillo);
 }
 
 .notas-header p{
@@ -172,11 +176,12 @@ header{
 }
 
 select{
-border-radius: 20px;
+border-radius: 5px;
 margin-top: 7px;
 margin-left: 5px;
 padding: 2px;
 width: 80px;
+font-weight: bold;
 }
 
 /*---------------------------TABLA NOTAS */
@@ -195,11 +200,11 @@ table{
 }
 
 .main-row:hover{
-    background-color: var(--rojolight);
+    background-color: var(--amarillotrans);
 }
 
 .main-row.active {
-    background-color: var(--rojolight);
+    background-color: var(--amarillotrans);
 }
 
 .details-row {
@@ -224,7 +229,7 @@ td{
 }
 
 tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: var(--fondo);
 }
 
 button{
@@ -235,12 +240,15 @@ button{
     margin: 6px 0px 0px 20px;
     transition: 0.3;
     cursor: pointer;
+    background-color: var(--amarillolight);
+    font-weight: bold;
+    opacity: 0.8;
 }
 
 button:hover{
-    background: linear-gradient(-135deg, var(--morado), var(--rojo));
+    background: var(--amarillo);
     font-weight: bold;
-    color: var(--fondo);
+    opacity: 1;
 }
 
 /*FOOTER*/
@@ -322,11 +330,6 @@ footer .redes img:hover{
 }
 
 /* RESPONSIVE */
-
-/*PC Ajuste*/
-@media(max-width: 2285px){
-    
-}
 
 /*Tablet*/
 @media(max-width: 992px){

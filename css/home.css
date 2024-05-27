@@ -2,12 +2,26 @@
 
 :root{
     --morado: rgba(175,60,249,255);
+    --moradolight: rgb(231, 188, 255);
+    --moradotrans: rgba(231, 188, 255, 0.20);
     --rojo: rgba(240,10,96,255);
+    --rojolight: rgb(255, 109, 170);
+    --rojotrans: rgba(240, 10, 96, 0.20);
     --gris: rgba(240,240,240,255);
     --gris-oscuro: rgba(155,155,155,255);
     --fondo: rgba(255,255,255,255);
     --letra: rgba(29,29,27,255);
     --blur: blur(10px);
+
+    --materia2: rgba(13,177,152,255);
+    --materia2light: rgba(153,251,236,255);
+    --materia3: rgba(71,95,229,255);
+    --materia3light: rgba(172,185,255,255);
+    --materia4: rgba(241,104,62,255);
+    --materia4light: rgba(242,185,133,255);
+    --amarillotrans: rgba(241, 185, 17, 0.57);
+    --amarillo: rgba(243, 209, 53, 1);
+    --amarillolight: rgba(248, 226, 122, 1);
 
     --verde: rgba(37, 200, 91, 255);
 }
@@ -22,6 +36,21 @@
 body{
     height: 100%;
     position: relative;
+    background-image: linear-gradient(45deg, var(--moradotrans), var(--fondo), var(--rojotrans));
+    background-size: 400% 400%;
+    animation: gradient 12s ease-in infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /*HEADER*/
