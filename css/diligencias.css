@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root{
+    --morado: rgba(175,60,249,255);
+    --rojo: rgba(240,10,96,255);
+    --gris: rgba(240,240,240,255);
+    --gris-oscuro: rgba(155,155,155,255);
+    --fondo: rgba(255,255,255,255);
+    --letra: rgba(29,29,27,255);
+    --blur: blur(10px);
+
+    --verde: rgba(37, 200, 91, 255);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/*HEADER*/
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.navbar a{
+    color: var(--letra);
+}
+
+.navbar a:hover{
+    color: var(--rojo);
+}
+
+header{
+    position: fixed;
+    width:100%;
+    top: 0;
+    background: var(--fondo);
+    box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .1);
+    font-weight: 600;
+    z-index: 1;
+}
+
+.navbar{
+    width: 100%;
+    height: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .home{
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .home img{
+    width: 150px;
+    height: 60px;
+}
+
+.navbar .perfil img{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.navbar .menu_btn{
+    color: var(--letra);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/*CONTENIDO*/
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: var(--fondo);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--letra);
+}
+
+.active-processes {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.active-button {
+    background: linear-gradient(to right, var(--rojo), var(--morado));
+    color: var(--fondo);
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 20em;
+}
+
+.active-button:hover {
+    transform: scale(1.1);
+}
+
+.notification {
+    background-color: var(--rojo);
+    color: var(--fondo);
+    border-radius: 50%;
+    padding: 8px 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background-color: var(--gris);
+    margin: 50px 0;
+}
+
+.needs-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--letra);
+}
+
+.dropdown {
+    width: 100%;
+    padding: 10px;
+    margin: 1rem;
+    margin-bottom: 15px;
+    border: 1px solid var(--gris-oscuro);
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--letra);
+}
+
+.actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0px;
+    gap: 10px;
+}
+
+.action-button {
+    color: var(--fondo);
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 15rem;
+    transition: background-color 0.3s ease;
+}
+
+.buscar{
+    background-color: var(--morado);
+}
+
+.buscar:hover {
+    background-color: var(--rojo);
+}
+
+.historial{
+    border: 2px solid var(--morado);
+    color: var(--morado);
+}
+
+.historial:hover{
+    background-color: var(--letra);
+    border: 2px solid var(--fondo);
+    color: var(--fondo);
+}
+
+.help-link {
+    margin-top: 100px;
+    font-size: 1.2rem;
+}
+
+.help-link a {
+    color: var(--morado);
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.help-link a:hover {
+    color: var(--rojo);
+}
+
+
+/*FOOTER*/
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: .8;
+    background-color: var(--morado);
+    padding: 1rem;
+    color: var(--fondo);
+}
+
+.footer p{
+    cursor: pointer;
+}
+
+footer .redes img{
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    
+    margin-left: 10px;
+}
+
+footer .redes img:hover{
+    transform: scale(1.1) rotate(360deg);
+}
+
+.footer p:hover{
+    text-decoration: underline;
+}
+
+/* DROPDOWN MENU A */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    height: 0;
+    width: 100%;
+    background-color: rgba(175, 60, 249, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 0 0 30px 30px;
+    overflow: hidden;
+    z-index: 1;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu a{
+    color: var(--letra);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.dropdown_menu a:hover{
+    color: var(--rojo);
+}
+
+.dropdown_menu a:active{
+    transform: scale(0.95);
+}
+
+/* RESPONSIVE */
+
+/*Tablet*/
+@media(max-width: 992px){
+
+    .dropdown {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .action-button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .progress-section {
+        width: 60%;
+        max-width: 600px;
+    }
+
+    .botones {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .boton a {
+        padding: 15px;
+    }
+
+    .boton button {
+        font-size: 18px;
+    }
+
+    .navbar .links{
+        display: none;
+    }
+
+    .navbar .menu_btn{
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+/*Mobile*/
+@media (max-width: 576px){
+    
+    .active-button {
+        font-size: 1.2rem;
+        padding: 8px 10px;
+    }
+
+    .dropdown {
+        font-size: 1rem;
+        padding: 6px;
+        height: 50px;
+    }
+
+    .action-button {
+        font-size: 1.2rem;
+        padding: 6px 10px;
+        height: 50px;
+    }
+
+    .actions {
+        margin-top: 30px;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .buscar{
+        margin-bottom: 10px;
+    }
+    
+    .dropdown_menu{
+        width: 100%;
+        margin-right: 50px;
+    }
+
+    .perfil{
+        display: none;
+    }
+
+    .menu_btn{
+        margin-right: 20px;
+    }
+
+    .home{
+        margin-left: 10px;
+    }
+}
