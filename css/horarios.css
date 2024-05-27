@@ -29,7 +29,7 @@
 }
 
 body{
-    height: 100vh;
+    height: 100%;
     position: relative;
     background-color: var(--gris);
 }
@@ -115,7 +115,7 @@ header{
 /*CALENDARIO*/
 .conten-calendar{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1800px;
     background-color: var(--fondo);
     box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .1);
     border-radius: 10px;
@@ -583,11 +583,6 @@ footer .redes img:hover{
 
 /* RESPONSIVE */
 
-/*PC Ajuste*/
-@media(max-width: 2285px){
-    
-}
-
 /*Tablet*/
 @media(max-width: 992px){
     .calendar{
@@ -601,8 +596,8 @@ footer .redes img:hover{
     }
 
     td{
-        padding: 0.6rem;
-        font-size: 0.8em;
+        padding: 1.5rem;
+        font-size: 1em;
     }
 
     .navbar .links{
@@ -632,7 +627,7 @@ footer .redes img:hover{
 
     td{
         padding: 0.9rem;
-        font-size: 0.5em;
+        font-size: 0.8em;
     }
 
     .task:hover .task-detail{
@@ -642,7 +637,6 @@ footer .redes img:hover{
     .task:active .task-detail{
         opacity: 1;
     }
-
 
     .dropdown_menu{
         width: 100%;
