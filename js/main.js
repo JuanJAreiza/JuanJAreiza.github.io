@@ -64,34 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-//HOME: Barra de progreso
-/*
-document.addEventListener("DOMContentLoaded", function() {
-    var progressBar = document.getElementById('progress-bar');
-    var progressText = document.getElementById('progress-text');
-    setTimeout(function() {
-      progressBar.style.width = '80%';
-      progressText.innerText = '80%';
-    }, 100); // Delay
-  });
-
-//HOME: Cambiar el estilo del texto "¡Falta poco!" en función del hover
-const faltaPoco = document.getElementById('falta-poco');
-const progressContainer = document.getElementById('progress-container');
-
-progressContainer.addEventListener('mouseover', () => {
-  faltaPoco.style.fontSize = '1.1em';
-  faltaPoco.style.color = 'var(--verde)';
-});
-
-progressContainer.addEventListener('mouseout', () => {
-  faltaPoco.style.fontSize = '';
-  faltaPoco.style.color = '';
-});
-
-
-
-*/
  //MATERIAS: FUNCION PARA EL DESPLIEGUE DE TABLAS
  const slides = document.querySelectorAll('.slide');
  const dots = document.querySelectorAll('.dot');
@@ -142,4 +114,5 @@ progressContainer.addEventListener('mouseout', () => {
  });
 
  
- 
+
+ /*DILIGENCIAS: Switch para modificar opciones*/

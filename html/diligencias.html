@@ -62,15 +62,22 @@
 
   <div class="needs-section">
       <h2>¿Qué necesitas?</h2>
+      <div class="switch-container">
+          <span class="switch-label">Colegio</span>
+          <label class="switch">
+              <input type="checkbox" class="switch-input">
+              <span class="switch-slider"></span>
+          </label>
+          <span class="switch-label">Universidad</span>
+      </div>
       <select class="dropdown" id="category">
           <option value="" disabled selected>Categoría</option>
-          <!-- Añadir opciones aquí -->
       </select>
       <select class="dropdown" id="service">
           <option value="" disabled selected>Servicio</option>
-          <!-- Añadir opciones aquí -->
       </select>
   </div>
+
 
   <div class="actions">
       <button class="action-button buscar">Buscar</button>
@@ -96,6 +103,5 @@
   </footer>
       
   <script src="../js/main.js"></script>
-
 </body>
 </html>
