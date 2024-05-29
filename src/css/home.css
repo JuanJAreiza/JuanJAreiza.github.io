@@ -99,6 +99,7 @@ header{
 .navbar .links{
     display: flex;
     gap: 2rem;
+    margin-right: 20px;
 }
 
 .navbar .home img{

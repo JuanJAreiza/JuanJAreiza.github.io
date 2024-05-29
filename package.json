@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "default": "src/index.html",
   "scripts": {
-    "start": "parcel src/index.html --no-cache",
+    "start": "parcel src/index.html src/html/*html src/css/*.css src/js/*.js --no-cache",
     "prod": "npm run clean && npm run build && firebase deploy",
     "clean": "rimraf public .parcel-cache dist",
     "build": "parcel build src/index.html src/html/*html src/css/*.css src/js/*.js --dist-dir public --no-cache"

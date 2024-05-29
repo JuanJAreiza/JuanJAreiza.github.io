@@ -18,6 +18,10 @@
     transition: all .2s linear;
 }
 
+body{
+    height: 100%;
+}
+
 /*HEADER*/
 
 li{
@@ -56,6 +60,7 @@ header{
 
 .navbar .home{
     cursor: pointer;
+    margin-left: 20px;
 }
 
 .navbar .links{
@@ -91,12 +96,11 @@ header{
 
 .info_conten{
     margin-top: 2rem;
-    height: 500px;
     background: var(--fondo);
     width: 100%;
 }
 
-.info_conten .titulo{
+.titulo{
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -109,10 +113,11 @@ header{
 
 .info_conten form{
     padding: 10px 30px 50px 30px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 40rem), 1fr));
     gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
 }
 
 .info_conten form .info{
@@ -121,8 +126,8 @@ header{
     position: relative;
 }
 
-.info_conten form .info input{
-    width: 800px;
+.info input{
+    width: 100%;
     height: 100%;
     outline: none;
     font-size: 17px;
@@ -156,22 +161,6 @@ form .info input:valid ~ label{
     color: var(--rojo);
     background: var(--fondo);
     transform: translateY(-50%);
-}
-
-form .info input[type="submit"]{
-    color: var(--fondo);
-    border: none;
-    padding-left: 0;
-    margin-top: -10px;
-    font-size: 20px;
-    font-weight: 500;
-    cursor: pointer;
-    background: linear-gradient(-135deg, var(--morado), var(--rojo));
-    transition: all 0.3s ease;
-}
-
-form .info input[type="submit"]:active{
-    transform: scale(0.95);
 }
 
 .agregar_info{
@@ -305,13 +294,15 @@ footer .redes img:hover{
 }
 
 /* RESPONSIVE */
-@media(max-width: 1680px){
-    .agregar_info{
-        margin-top: 100px;
-    }
-}
 
 @media(max-width: 992px){
+    
+    .info_conten form{
+        grid-template-columns: repeat(auto-fill, minmax(max(30%, 10rem), 1fr));
+        gap: 50px;
+        margin: 0 auto;
+    }
+
     .navbar .links{
         display: none;
     }
@@ -324,10 +315,6 @@ footer .redes img:hover{
         display: block;
     }
 
-    .info_conten form .info input{
-        width: 500px;
-    }
-
     .menu_btn{
         margin-right: 20px;
     }
@@ -338,27 +325,14 @@ footer .redes img:hover{
 }
 
 @media (max-width: 576px){
-    .categoria-contenedor .botones .boton{
-        transform: scale(.8);
-        display: flex;
-        flex-flow: row wrap;
-        margin: -10px;
-    }
+
     
     .dropdown_menu{
         width: 100%;
     }
 
-    .agregar_info{
-        margin-top: -150px;
-    }
-
     .perfil{
         display: none;
-    }
-
-    .info_conten form .info input{
-        width: 200px;
     }
 
     .menu_btn{
