@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root{
+    --morado: rgba(175,60,249,255);
+    --rojo: rgba(240,10,96,255);
+    --gris: rgba(240,240,240,255);
+    --gris-oscuro: rgba(155,155,155,255);
+    --fondo: rgba(255,255,255,255);
+    --letra: rgba(29,29,27,255);
+    --blur: blur(10px);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    transition: all .2s linear;
+}
+
+/*HEADER*/
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.navbar a{
+color: var(--letra);
+}
+
+.navbar a:hover{
+color: var(--rojo);
+}
+
+header{
+    position: fixed;
+    width:100%;
+    top: 0;
+    background: var(--fondo);
+    box-shadow: 0 .2rem 1rem rgba(0, 0, 0, .1);
+    font-weight: 600;
+    z-index: 1;
+}
+
+.navbar{
+    width:100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .home{
+    cursor: pointer;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+    margin-right: 20px;
+}
+
+.navbar .home img{
+    width: 150px;
+    height: 60px;
+    margin-left: 10px;
+}
+
+.navbar .menu_btn{
+    color: var(--letra);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+/*INFORMACIÓN*/
+.info_principal{
+    margin-top: 120px;
+    text-align: center;
+}
+
+.info_principal img{
+    width: 100px;
+    height: 100px;
+}
+
+.info_conten{
+    margin-top: 2rem;
+    height: 500px;
+    background: var(--fondo);
+    width: 100%;
+}
+
+.info_conten .titulo{
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    background: linear-gradient(-135deg, var(--morado), var(--rojo));
+    color: var(--fondo);
+    height: 50px;
+}
+
+.info_conten form{
+    padding: 10px 30px 50px 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.info_conten form .info{
+    height: 50px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.info_conten form .info input{
+    width: 800px;
+    height: 100%;
+    outline: none;
+    font-size: 17px;
+    padding-left: 20px;
+    border-radius: 25px;
+    border: 1px solid var(--gris-oscuro);
+    transition: all 0.3 ease;
+}
+
+.info_conten form .info input:focus,
+form .info input:valid{
+    border-color: var(--morado);
+}
+
+.info_conten form .info label{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    color: var(--gris-oscuro);
+    font-weight: 400;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+form .info input:focus ~ label,
+form .info input:valid ~ label{
+    top: 0%;
+    font-size: 16px;
+    color: var(--rojo);
+    background: var(--fondo);
+    transform: translateY(-50%);
+}
+
+form .info input[type="submit"]{
+    color: var(--fondo);
+    border: none;
+    padding-left: 0;
+    margin-top: -10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient(-135deg, var(--morado), var(--rojo));
+    transition: all 0.3s ease;
+}
+
+form .info input[type="submit"]:active{
+    transform: scale(0.95);
+}
+
+.agregar_info{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--morado);
+}
+
+.agregar_info a{
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+/*FOOTER*/
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: .8;
+    background-color: var(--morado);
+    padding: 1rem;
+    color: var(--fondo);
+}
+
+.footer p{
+    cursor: pointer;
+}
+
+footer .redes img{
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    
+    margin-left: 10px;
+}
+
+footer .redes img:hover{
+    transform: scale(1.1) rotate(360deg);
+}
+
+.footer p:hover{
+    text-decoration: underline;
+}
+
+/* DROPDOWN MENU A */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    height: 0;
+    width: 100%;
+    background-color: rgba(175, 60, 249, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 0 0 30px 30px;
+    overflow: hidden;
+    z-index: 1;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.dropdown_menu li{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu a{
+    color: var(--letra);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.dropdown_menu a:hover{
+    color: var(--rojo);
+}
+
+.dropdown_menu a:active{
+    transform: scale(0.95);
+}
+
+/* DROPDOWN MENU B */
+.dropdown_menuB{
+    display: none;
+    position: absolute;
+    height: 0;
+    width: 100%;
+    background-color: rgba(175, 60, 249, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menuB.open{
+    height: 240px;
+}
+
+.dropdown_menuB li{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menuB a{
+    color: var(--letra);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.dropdown_menuB a:hover{
+    color: var(--rojo);
+}
+
+.dropdown_menuB a:active{
+    transform: scale(0.95);
+}
+
+/* RESPONSIVE */
+@media(max-width: 1680px){
+    .agregar_info{
+        margin-top: 100px;
+    }
+}
+
+@media(max-width: 992px){
+    .navbar .links{
+        display: none;
+    }
+
+    .navbar .menu_btn{
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+
+    .info_conten form .info input{
+        width: 500px;
+    }
+
+    .menu_btn{
+        margin-right: 20px;
+    }
+
+    .home{
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 576px){
+    .categoria-contenedor .botones .boton{
+        transform: scale(.8);
+        display: flex;
+        flex-flow: row wrap;
+        margin: -10px;
+    }
+    
+    .dropdown_menu{
+        width: 100%;
+    }
+
+    .agregar_info{
+        margin-top: -150px;
+    }
+
+    .perfil{
+        display: none;
+    }
+
+    .info_conten form .info input{
+        width: 200px;
+    }
+
+    .menu_btn{
+        margin-right: 20px;
+    }
+
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel ="Stylesheet" href="../css/home.css">
+</head>
+<body id="home">
+    
+  <header>
+
+    <div class="navbar">
+      <div class="home">
+        <a href="home.html"><img src="../imgs/logoUPB.jpeg" alt="El logo de la UPB"></a>
+      </div>
+
+      <ul class="links">
+          <li><a href="https://www.upb.edu.co/es/home">UPB Web</a></li>
+          <li><a href="https://virtual.upb.edu.co/d2l/login">Brightspace</a></li>
+          <li><a href="https://sso.upb.edu.co/authenticationendpoint/login.do?RelayState=https%3A%2F%2Fauladigital.upb.edu.co%2F&commonAuthCallerPath=%2Fsamlsso&forceAuth=false&passiveAuth=false&tenantDomain=carbon.super&sessionDataKey=be61a26d-c35c-4b88-8c01-9dfb31201a1e&relyingParty=https%3A%2F%2Fauladigital.upb.edu.co%2Fauth%2Fsaml2%2Fsp%2Fmetadata.php&type=samlsso&sp=auladigital.upb.edu.co&isSaaSApp=false&authenticators=BasicAuthenticator%3ALOCAL">
+            Moodle</a></li>
+          <li><a href="https://www.upb.edu.co/es/open">UPB Open</a></li>
+      </ul>
+
+
+      <div class="menu_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="perfil">
+      <a href="perfil.html"><img src="../imgs/profile.png" alt="Icono de perfil"></a>
+      </div>
+    </div>
+
+    <div class="dropdown_menu">
+      <li><a href="https://www.upb.edu.co/es/home">UPB Web</a></li>
+      <li><a href="https://virtual.upb.edu.co/d2l/login">Brightspace</a></li>
+      <li><a href="https://sso.upb.edu.co/authenticationendpoint/login.do?RelayState=https%3A%2F%2Fauladigital.upb.edu.co%2F&commonAuthCallerPath=%2Fsamlsso&forceAuth=false&passiveAuth=false&tenantDomain=carbon.super&sessionDataKey=be61a26d-c35c-4b88-8c01-9dfb31201a1e&relyingParty=https%3A%2F%2Fauladigital.upb.edu.co%2Fauth%2Fsaml2%2Fsp%2Fmetadata.php&type=samlsso&sp=auladigital.upb.edu.co&isSaaSApp=false&authenticators=BasicAuthenticator%3ALOCAL">
+        Moodle</a></li>
+      <li><a href="https://www.upb.edu.co/es/open">UPB Open</a></li>
+    </div>
+
+  </header>
+
+  <div class="inicio">
+    <div class="bienvenida-conten">
+      <div class="bienvenido">
+        <h1>¡Bienvenido </h1>
+      </div>
+      <div>  
+        <h1 class="nombre" id="nombre"><a href="../html/perfil.html">Juan!</a></h1>
+      </div>
+    </div>
+
+
+    <section class="progress-section">
+      <div class="apoyo-textos">
+        <p>Este es tu progreso:</p>
+        <p id="falta-poco">¡Falta poco!</p>
+      </div>
+      <div class="progress-container" id="progress-container" onclick="location.href='diligencias.html'">
+        <div class="progress-bar" id="progress-bar">
+          <span class="progress-text" id="progress-text">80%</span>
+          <i class="fa fa-graduation-cap progress-icon" aria-hidden="true"></i>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="fondo"> </div>
+
+  <div class="categoria-contenedor">
+    <div class="titulo">
+        <h1>Categorías</h1>
+    </div>
+    <div class="botones">
+        <nav class="boton">
+            <a href="horarios.html">
+                <img src="../imgs/horario.png" alt="Horarios">
+                <button>Horarios</button>
+            </a>
+        </nav>
+        <nav class="boton">
+            <a href="notas.html">
+                <img src="../imgs/notas.png" alt="Notas">
+                <button>Notas</button>
+            </a>
+        </nav>
+        <nav class="boton">
+            <a href="materias.html">
+                <img src="../imgs/materias.png" alt="Materias">
+                <button>Materias</button>
+            </a>
+        </nav>
+        <nav class="boton">
+            <a href="encuestas.html">
+                <img src="../imgs/encuesta.png" alt="Encuesta">
+                <button>Encuestas</button>
+            </a>
+        </nav>
+        <nav class="boton">
+            <a href="diligencias.html">
+                <img src="../imgs/diligencias.png" alt="Diligencias">
+                <button>Diligencias</button>
+            </a>
+        </nav>
+    </div>
+</div>
+
+  <footer>
+    <div class="footer">
+      <p>Versión 0.1</p>
+      <div class="redes">
+        <a href="https://www.facebook.com/UPBColombia" class="red"><img src="../imgs/facebook.png" alt=""></a>
+        <a href="https://twitter.com/upbcolombia" class="red"><img src="../imgs/twitter.png" alt=""></a>
+        <a href="https://www.youtube.com/user/ComunicacionesUPB" class="red"><img src="../imgs/youtube.png" alt=""></a>
+        <a href="https://www.instagram.com/upbcolombia" class="red"><img src="../imgs/instagram.png" alt=""></a>
+      </div>
+      <p>Ayuda</p>
+  </div>
+  </footer>
+      
+  <script type="module" src="../js/main.js"></script>
+
+</body>
+</html>

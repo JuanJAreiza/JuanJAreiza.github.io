@@ -1,0 +1,21 @@
+{
+  "name": "juanjareiza.github.io",
+  "version": "1.0.0",
+  "default": "src/index.html",
+  "scripts": {
+    "start": "parcel src/index.html --no-cache",
+    "prod": "npm run clean && npm run build && firebase deploy",
+    "clean": "rimraf public .parcel-cache dist",
+    "build": "parcel build src/index.html src/html/*html src/css/*.css src/js/*.js --dist-dir public --no-cache"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  },
+  "dependencies": {
+    "rimraf": "^5.0.7"
+  }
+}

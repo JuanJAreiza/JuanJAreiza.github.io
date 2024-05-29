@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Login</title>
+    <link rel ="Stylesheet" href="css/main.css">
+</head>
+<body>
+  
+  <header>
+    <div class="logos">
+      <div class="logo1">
+        <img src="imgs/logoUPB.jpeg" alt="El logo de la UPB" width="180" height="70">
+      </div>
+  
+    <h1>SIGAA</h1>
+
+      <div class="logo2">
+        <img src="imgs/logoUPB2.png" alt="El logo de la UPB negro" width="180" height="70">
+      </div>
+    </div>
+  </header>
+  
+  <div class="fondo"> </div>
+
+  <div class="formulario">
+
+    <div class="titulo">
+      <h1>Inicio de sesión</h1>
+    </div>
+
+    <form action="./html/home.html" method="get">
+
+      <div class="campo">
+        <input type="text" id="ident" required>
+        <label for="ident">ID</label>
+      </div>
+
+      <div class="campo">
+        <input type="password" id="pass" required>
+        <label for="pass">Contraseña</label>
+      </div>
+
+      <div class="content">
+        <div class="checkbox">
+          <input type="checkbox" id="recordar">
+          <label for="recordar">Recuérdame</label>
+        </div>
+
+        <div class="pass-link">
+          <a href="./html/olvido.html">Olvidé mi contraseña</a>
+        </div>
+      </div>
+
+      <div class="campo">
+        <input type="submit" value="Iniciar Sesión">
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="footer">
+    <p>Este sitio web usa cookies.</p>
+    <p>Políticas de Privacidad</p>
+  </div>
+  
+</body>
+</html>
